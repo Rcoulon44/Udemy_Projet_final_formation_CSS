@@ -1,0 +1,14 @@
+{
+  "name": "projet_final",
+  "version": "1.0.0",
+  "description": "Site final de la formation Udemy sur le CSS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Romain COULON",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.49.9"
+  }
+}

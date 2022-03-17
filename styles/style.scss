@@ -1,0 +1,117 @@
+// Les variables
+$blancCasse : #f1f1f1;
+$blancGris : #f5f5f5;
+$sombre : #333;
+
+@mixin flexCentreX{
+  display: flex;
+  justify-content: center;
+}
+
+*, ::before, ::after{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+}
+
+// navbar
+.navbar{
+  height: 60px;
+  width: 100%;
+  background-color: $blancGris;
+  @include flexCentreX;
+  border-bottom: 1px solid black;
+  position: fixed;
+  z-index: 100;
+
+  .contItems{
+    font-size: 22px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    .items{
+      margin-right: 30px;
+      text-decoration: none;
+      color: black;
+
+      &:hover{
+        color: #5f5f5f;
+      }
+    }
+  }
+}
+
+// accueil
+
+.accueil{
+  height: 800px;
+  width: 100%;
+  background-color: $sombre;
+  background: url('../ressources/home.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1{
+    font-family: 'Abril Fatface', sans-serif;
+    color: $blancCasse;
+    font-size: 70px;
+    letter-spacing: 5px;
+    margin: 0;
+    position: relative;
+    padding-top: 150px;
+
+    &::first-letter{
+      font-size: 120px;
+    }
+  }
+
+  .sousTitreP{
+    color: $blancCasse;
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+  }
+}
+
+// Media query pour la partie Accueil
+@media screen and (max-width: 1000px){
+  .accueil h1{
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 760px){
+  .accueil{
+    height: 600px;
+    h1{
+      font-size: 30px;
+    }
+    .sousTitreP{
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 550px){
+  .accueil{
+    height: 500px;
+    align-items: flex-start;
+    h1{
+      margin: 0px 20px;
+      &::first-letter{
+        font-size: 50px;
+      }
+    }
+    .sousTitreP{
+      margin: 0px 20px;
+    }
+  }
+}
