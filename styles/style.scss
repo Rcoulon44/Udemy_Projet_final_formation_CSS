@@ -146,10 +146,8 @@ body{
     }
 
     .contTextSec1{
-      width: 45%;
+      @extend .contImgSec1;
       background-color: azure;
-      margin: 20px;
-      border-radius: 2px;
 
       h2{
         text-align: center;
@@ -180,7 +178,7 @@ body{
   .txtImg .flexContainerSection1{
     flex-direction: column;
     align-items: center;
-    width: 400px;
+    width: 800px;
   }
 
   .contImgSec1{
@@ -192,8 +190,82 @@ body{
   }
 }
 
+@media screen and (max-width:800px){
+  .txtImg .flexContainerSection1{
+    width: 500px;
+  }
+}
+
+
 @media screen and (max-width:550px){
+  .txtImg .flexContainerSection1{
+    width: 80vw;
+  }
   .titreSec1{
     font-size: 25px;
+  }
+}
+
+
+// Section Portfolio
+
+.titrePortfolio{
+  font-size: 40px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+@media screen and (max-width: 550px){
+  .titrePortfolio{
+    font-size: 25px;
+  }
+}
+
+.diviseurPort{
+  width: 20%;
+}
+
+.portfolioImg{
+  padding-top: 20px;
+  padding-bottom: 100px;
+  width: 100%;
+  @include flexCentreX;
+
+  .flexImgPortfolio{
+    width: 1200px;
+    @include flexCentreX;
+    flex-wrap: wrap;
+
+    .imgPort{
+      width: 300px;
+      height: 370px;
+      overflow: hidden;
+      margin: 20px;
+
+      img{
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+// Section Parallax
+
+.parasSroll{
+  width: 100%;
+  height: 300px;
+  background: url('..//ressources/para.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  @include flexCentreX;
+  align-items: center;
+
+  h3{
+    text-align: center;
+    color: $blancCasse;
+    font-size: 50px;
+    letter-spacing: 5px;
   }
 }
