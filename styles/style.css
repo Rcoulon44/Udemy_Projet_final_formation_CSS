@@ -33,7 +33,39 @@ body {
 .navbar .contItems .items:hover {
   color: #5f5f5f;
 }
+.navbar .logoMenuImg {
+  display: none;
+}
 
+@media screen and (max-width: 700px) {
+  .navbar {
+    display: block;
+  }
+  .navbar .contItems {
+    display: none;
+    border-top: 1px solid black;
+  }
+  .navbar .contItems .items {
+    background-color: #f5f5f5;
+    margin-right: 0;
+    padding: 10px 20px;
+    display: block;
+  }
+  .navbar .contItems .items:nth-child(1) {
+    padding-top: 20px;
+  }
+  .navbar .logoMenuImg {
+    display: block;
+    margin-left: auto;
+    margin-right: 20px;
+    height: 60px;
+    position: relative;
+  }
+  .navbar .responsive {
+    display: block;
+    margin-top: 50px;
+  }
+}
 .accueil {
   height: 800px;
   width: 100%;
@@ -226,6 +258,53 @@ body {
   color: #f1f1f1;
   font-size: 50px;
   letter-spacing: 5px;
+}
+
+.titreForm {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.formulaire {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.formulaire form {
+  width: 60%;
+}
+.formulaire form .row {
+  width: 100%;
+}
+.formulaire form .row input, .formulaire form .row textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.formulaire form .row textarea {
+  height: 150px;
+}
+.formulaire form .row .subBtn {
+  width: 30%;
+  margin: 0 auto;
+  display: block;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.formulaire form .row .subBtn:hover {
+  background-color: midnightblue;
+  color: #f1f1f1;
+}
+.formulaire form .row:nth-child(2), .formulaire form .row:nth-child(3) {
+  margin-top: 30px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  border-top: 1px dashed #333;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -45,6 +45,46 @@ body{
       }
     }
   }
+  .logoMenuImg{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700px){
+
+  .navbar{
+    display: block;
+
+    .contItems{
+      display: none;
+      border-top: 1px solid black;
+
+      .items{
+        background-color: $blancGris;
+        margin-right: 0;
+        padding: 10px 20px;
+        display: block;
+
+        &:nth-child(1){
+          padding-top: 20px;
+        }
+      }
+
+    }
+
+    .logoMenuImg{
+      display: block;
+      margin-left: auto;
+      margin-right: 20px;
+      height: 60px;
+      position: relative;
+    }
+
+    .responsive{
+      display: block;
+      margin-top: 50px;
+    }
+  }
 }
 
 // accueil
@@ -268,4 +308,60 @@ body{
     font-size: 50px;
     letter-spacing: 5px;
   }
+}
+
+
+// Section formulaire
+
+.titreForm{
+  text-align: center;
+  padding-top: 50px;
+}
+
+.formulaire{
+  width: 100%;
+  @include flexCentreX;
+
+  form{
+    width: 60%;
+
+    .row{
+      width: 100%;
+
+      input, textarea{
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      textarea{
+        height: 150px;
+      }
+
+      .subBtn{
+        width: 30%;
+        margin: 0 auto;
+        display: block;
+        margin-top: 10px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:hover{
+          background-color: midnightblue;
+          color: $blancCasse;
+        }
+      }
+    }
+    .row:nth-child(2), .row:nth-child(3){
+      margin-top: 30px;
+    }
+  }
+}
+
+// footer
+footer{
+  @include flexCentreX;
+  border-top: 1px dashed $sombre;
+
 }
