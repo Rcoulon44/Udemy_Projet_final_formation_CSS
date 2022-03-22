@@ -53,11 +53,18 @@ body{
 @media screen and (max-width: 700px){
 
   .navbar{
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
 
     .contItems{
       display: none;
+      width: 100%;
       border-top: 1px solid black;
+      position: absolute;
+      top: 60px;
+      z-index: 100;
 
       .items{
         background-color: $blancGris;
@@ -74,15 +81,14 @@ body{
 
     .logoMenuImg{
       display: block;
-      margin-left: auto;
       margin-right: 20px;
-      height: 60px;
+      height: 60%;
+      width: auto;
       position: relative;
     }
 
     .responsive{
       display: block;
-      margin-top: 50px;
     }
   }
 }

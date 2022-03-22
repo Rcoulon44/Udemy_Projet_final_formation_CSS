@@ -7,13 +7,9 @@ logoMenu.addEventListener('click', () => {
   if(contItems.className === 'contItems'){
 
     contItems.className += " responsive";
-    logoMenu.style.width = "30px";
-    logoMenu.style.top = "5px";
     logoMenu.src = "ressources/close.svg";
   } else {
     contItems.className = "contItems";
-    logoMenu.style.width = "30px";
-    logoMenu.style.top = "13px";
     logoMenu.src = "ressources/menu.svg";
   }
 
